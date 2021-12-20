@@ -1,5 +1,5 @@
 function getData(from, to, elementToInsertData) {
-    const URL = `http://127.0.0.1:8000/shop/getDataFromDB?from=${from}&to=${to}`;
+    const URL = `https://dpo-mysite.herokuapp.com/shop/getDataFromDB?from=${from}&to=${to}`;
   
     fetch(URL)
       .then((res) => res.json())
