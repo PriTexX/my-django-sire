@@ -1,0 +1,46 @@
+
+.card-img-top{
+  height: 160px;
+}
+
+/* ----- Filter-Sort Buttons ----- */
+
+.sort-filter-buttons .navbar-nav{
+  font-family: 'FontAwesome';
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.sort-filter-buttons .filter{
+  margin-left: 15px;
+}
+
+.sort-filter-buttons .nav-link {
+  color: rgb(94, 86, 86);
+  margin-bottom: 20px;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.sort-filter-buttons .sort {
+  margin-left: 15px;
+}
+
+/* ----- Filter-Sort Buttons ----- */
+
+@media (min-width: 768px){
+  .row-cols-md-3>* {
+      flex: 0 0 auto;
+      width: 33.3%;
+  }
+}
+
+@media (min-width: 1200px){
+  .row-cols-xl-4>* {
+      flex: 0 0 auto;
+      width: 21%;
+  }
+}
+
+

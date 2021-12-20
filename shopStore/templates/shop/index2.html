@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}ProductStore{% endblock %} 
+{%load static%} 
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'shop/shopStyle.css' %}" />
+<link rel="stylesheet" href="{% static 'shop/modalStyle.css' %}">
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'shop/cardButtons.js' %}"></script>
+<script src="{% static 'shop/shopScript.js' %}"></script>
+<script src="{% static 'shop/getItemsFromDB.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container-fluid d-flex flex-column">
+    <div class="sort-filter-buttons">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown filter">
+                <a href="#" class="nav-link dropdown-toggle" id="filterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="fa-solid fa-filter"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                    <li><a href="#" class="dropdown-item" data-category="vegatables">Овощи</a></li>
+                    <li><a href="#" class="dropdown-item" data-category="fruit">Фрукты</a></li>
+                    <li><a href="#" class="dropdown-item" data-category="dairy">Молочные продукты</a></li>
+                    <li><a href="#" class="dropdown-item" data-category="bakery">Выпечка</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown sort">
+                <a href="" class="nav-link dropdown-toggle" id="sortDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="fa-solid fa-sort"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                    <li><a href="#" class="dropdown-item">Цена от меньшей к больше</a></li>
+                    <li><a href="#" class="dropdown-item">Цена от большей к меньшей</a></li>
+                    <li><a href="#" class="dropdown-item">Название в алфавитном порядке</a></li>
+                    <li><a href="#" class="dropdown-item">Название в обратном алфовитном порядке</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main" id="main"></div>
+</div>
+<script>
+    window.onload = () => getData(1,10, document.getElementById('main'))
+</script>
+{% endblock %}

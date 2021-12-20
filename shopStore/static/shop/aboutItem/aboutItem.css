@@ -1,0 +1,150 @@
+body {
+    background-color: #fff;
+}
+.main {
+    display: grid;
+    grid-template: 700px/1fr 1fr;
+    gap: 20px;
+    margin: 0 15px;
+}
+
+.img-container {
+    position: relative;
+    padding-top: 56.25%;
+    max-width: 630px;
+}
+
+.item-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    
+    max-height: 700px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'serif';
+}
+.info-container .name {
+    height: 75px;
+    line-height: 75px;
+    font-size: 24px;
+    font-weight: 700;
+    align-self: center;
+    font-family: 'Helvetica Neue';
+}
+
+.info-container .price {
+    margin-top: 25px;
+    align-self: center;
+}
+
+.info-container .price .price__small {
+    text-decoration: line-through;
+    font-size: 11px;
+}
+
+.info-container .price .price__big {
+    font-size: 20px;
+    margin-left: 12px;
+    color: rgb(233, 18, 18);
+}
+
+.info-container .price .price__normal {
+    font-size: 16px;
+}
+
+.info-container .shops-buttons-container {
+    display: grid;
+    grid-template: minmax(250px, 1fr)/1.25fr 0.75fr;
+}
+
+.info-container .shops-buttons-container .buttons {
+    display: flex;
+    font-family: 'FontAwesome';
+    font-size: 24px;
+    align-self: center;   
+    justify-self: center;
+}
+.info-container .shops-buttons-container .buttons .button__like {
+    margin-right: 20px;
+}
+.info-container .shops-buttons-container .buttons .button__add {
+    margin-left: 20px;
+}
+.info-container .shops-buttons-container .buttons .item__btn {
+    opacity: 70%;
+    transition: opacity .3s
+}
+.info-container .shops-buttons-container .buttons .item__btn:hover {
+    opacity: 1;
+    transition: opacity .3s
+}
+
+.info-container .shops-buttons-container .buttons .item__btn.active {
+    color:red;
+    transition: color .2s;
+}
+
+.info-container .shops-buttons-container .buttons .fa-gratipay.active {
+
+}
+.info-container .shops-buttons-container .buttons .fa-cart-plus.active {
+
+}
+
+.info-container .shops-buttons-container .shops {
+    width: 100%;
+    overflow-y: auto;
+    font-family: 'monospace';
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 15px;
+}
+.info-container .shops-buttons-container .shops .shop__title {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.info-container .shops-buttons-container .shops .shop__item {
+    margin-top: 8px;
+}
+
+.info-container .close-item {
+    font-family: 'FontAwesome';
+    width: 50px;
+    height: 50px;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

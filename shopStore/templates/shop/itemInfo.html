@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block styles %} <link rel="stylesheet" href="{% static 'shop/aboutItem/aboutItem.css' %}"> {% endblock %}
+
+{% block scripts %} <script src="{% static 'shop/aboutItem/aboutItemScript.js' %}"></script> {% endblock %}
+
+{% block content %}
+
+<div class="main">
+    <div class="img-container">
+        <img src="{{item.item_image}}" alt="" class="item-image">
+    </div>
+    <div class="info-container">
+        <div class="name">{{item.name}}</div>
+        <div class="description">
+            <span class="description-text">{{item.description}}</span>
+        </div>
+        <div class="shops-buttons-container">
+            <div class="shops">
+                <span class="shop__title">В наличии в {{shops_len}} магазинах:</span>
+                {% for shop in shops %}
+                <div class="shop__item">
+                    <span class="shop__item-address">{{shop.getShopAddress}}</span>
+                    <span class="shop__item-amount">{{shop.amount}}<small>шт.</small></span>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="buttons">
+                <div class="button__like"><span class="fa-brands fa-gratipay item__btn"></span></div>
+                <div class="button__add"><span class="fa-solid fa-cart-plus item__btn"></span></div>
+            </div>
+        </div>
+        <div class="price">
+            {% if item.prev_price %}
+            <span class="price__small">{{item.prev_price}}</span><span class="price__big">{{item.price}}</span>
+            {% else %}
+            <span class="price__normal">{{item.price}}</span>
+            {% endif %}
+        </div>
+        <div class="close-item ms-auto">
+            <a href="{% url  'shop:index'%}" class="fa-solid fa-door-open"></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
