@@ -94,9 +94,7 @@ DATABASES = {
     }
 }
 
-db_from_env = dj_database_url.config(
-    default='mysql://pritexx:230512@pritexx-hpenvy:3306/productshop'
-)
+db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
 # Password validation
