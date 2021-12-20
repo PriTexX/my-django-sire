@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker shopStore.wsgi
+web: gunicorn shopStore.wsgi
